@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>أعمالي - Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* CSS Reset and Variables */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #3498db;
+        --accent-color: #e74c3c;
+        --light-color: #ecf0f1;
+        --dark-color: #2c3e50;
+        --text-color: #333;
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s ease;
+      }
+
+      body {
+        background-color: #f9f9f9;
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      /* Header and Navigation */
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: var(--shadow);
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+      }
+
+      .logo span {
+        color: var(--secondary-color);
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-right: 1.5rem;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: var(--transition);
+        padding: 0.5rem 0;
+        position: relative;
+      }
+
+      nav ul li a:hover {
+        color: var(--secondary-color);
+      }
+
+      nav ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--secondary-color);
+        transition: var(--transition);
+      }
+
+      nav ul li a:hover::after {
+        width: 100%;
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: white;
+        padding: 10rem 0 5rem;
+        text-align: center;
+        margin-top: 60px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: var(--accent-color);
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #c0392b;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Portfolio Section */
+      .portfolio {
+        padding: 5rem 0;
+        background-color: white;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .section-title h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        display: inline-block;
+      }
+
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 80px;
+        height: 4px;
+        background-color: var(--secondary-color);
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .portfolio-item {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+      }
+
+      .portfolio-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .portfolio-img {
+        height: 200px;
+        background-color: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: var(--primary-color);
+      }
+
+      .portfolio-content {
+        padding: 1.5rem;
+      }
+
+      .portfolio-content h3 {
+        margin-bottom: 0.5rem;
+        color: var(--primary-color);
+      }
+
+      .portfolio-content p {
+        color: #666;
+        margin-bottom: 1rem;
+      }
+
+      .portfolio-link {
+        display: inline-block;
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-weight: bold;
+        transition: var(--transition);
+      }
+
+      .portfolio-link:hover {
+        color: var(--primary-color);
+      }
+
+      /* About Section */
+      .about {
+        padding: 5rem 0;
+        background-color: var(--light-color);
+      }
+
+      .about-content {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+      }
+
+      .about-text {
+        flex: 1;
+      }
+
+      .about-text h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+      }
+
+      .about-text p {
+        margin-bottom: 1.5rem;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .skill {
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+      }
+
+      .about-image {
+        flex: 1;
+        text-align: center;
+      }
+
+      .profile-img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+        color: var(--primary-color);
+        margin: 0 auto;
+      }
+
+      /* Contact Section */
+      .contact {
+        padding: 5rem 0;
+        background-color: white;
+      }
+
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: var(--transition);
+      }
+
+      .form-control:focus {
+        border-color: var(--secondary-color);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+      }
+
+      textarea.form-control {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 3rem 0 1.5rem;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+      }
+
+      .footer-logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .footer-links h3,
+      .footer-social h3 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .footer-links ul {
+        list-style: none;
+      }
+
+      .footer-links ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links ul li a {
+        color: #ddd;
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .footer-links ul li a:hover {
+        color: var(--secondary-color);
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .social-icons a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        color: white;
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .social-icons a:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-3px);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+        color: #ddd;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        .about-content {
+          flex-direction: column;
+        }
+
+        .about-image {
+          order: -1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        nav ul {
+          position: fixed;
+          top: 70px;
+          right: -100%;
+          width: 80%;
+          height: calc(100vh - 70px);
+          background-color: var(--primary-color);
+          flex-direction: column;
+          align-items: center;
+          padding-top: 2rem;
+          transition: var(--transition);
+        }
+
+        nav ul.active {
+          right: 0;
+        }
+
+        nav ul li {
+          margin: 1rem 0;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .footer-content {
+          flex-direction: column;
+          gap: 2rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .section-title h2 {
+          font-size: 2rem;
+        }
+
+        .portfolio-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container nav-container">
+        <a href="#" class="logo">Portfolio<span>Pro</span></a>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#portfolio">أعمالي</a></li>
+            <li><a href="#about">عني</a></li>
+            <li><a href="#contact">اتصل بي</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <h1>مرحباً، أنا مصمم ومطور ويب</h1>
+        <p>
+          أقوم بإنشاء تجارب ويب رائعة وجذابة باستخدام أحدث التقنيات. استعرض
+          أعمالي واكتشف كيف يمكنني مساعدتك في مشروعك القادم.
+        </p>
+        <a href="#portfolio" class="btn">استعرض أعمالي</a>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2>أعمالي</h2>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <div class="portfolio-img">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>تصميم جرافيكي 1</h3>
+              <p>تصميم إبداعي باستخدام أحدث أدوات التصميم الجرافيكي.</p>
+              <a
+                href="https://portfoliopro.github.io/profile/Untitled%20design%20(1).pdf"
+                target="_blank"
+                class="portfolio-link"
+                >عرض المشروع <i class="fas fa-arrow-left"></i
+              ></a>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-img">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>تصميم جرافيكي 2</h3>
+              <p>تصميم مبتكر يجمع بين البساطة والفعالية.</p>
+              <a
+                href="https://portfoliopro.github.io/profile/Untitled%20design%20.pdf"
+                target="_blank"
+                class="portfolio-link"
+                >عرض المشروع <i class="fas fa-arrow-left"></i
+              ></a>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-img">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>تصميم جرافيكي 3</h3>
+              <p>تصميم احترافي يلبي احتياجات العملاء.</p>
+              <a
+                href="https://portfoliopro.github.io/profile/Untitled%20design%20(2).pdf"
+                target="_blank"
+                class="portfolio-link"
+                >عرض المشروع <i class="fas fa-arrow-left"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>عني</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <h2>مصمم ومطور ويب محترف</h2>
+            <p>
+              أنا مصمم ومطور ويب شغوف بإنشاء تجارب رقمية استثنائية. مع أكثر من 5
+              سنوات من الخبرة في مجال التصميم والتطوير، أساعد العملاء على تحويل
+              أفكارهم إلى واقع ملموس.
+            </p>
+            <p>
+              أتخصص في تصميم واجهات المستخدم وتجربة المستخدم، وتطوير مواقع الويب
+              والتطبيقات باستخدام أحدث التقنيات مثل HTML5, CSS3, JavaScript,
+              React وغيرها.
+            </p>
+            <div class="skills">
+              <span class="skill">تصميم UI/UX</span>
+              <span class="skill">تطوير الويب</span>
+              <span class="skill">التصميم الجرافيكي</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">React</span>
+              <span class="skill">CSS3</span>
+            </div>
+          </div>
+          <div class="about-image">
+            <div class="profile-img">
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>اتصل بي</h2>
+        </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">الاسم الكامل</label>
+            <input type="text" id="name" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" id="email" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">الموضوع</label>
+            <input type="text" id="subject" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="message">الرسالة</label>
+            <textarea id="message" class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="btn">إرسال الرسالة</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <div class="footer-logo">Portfolio<span>Pro</span></div>
+            <p>مصمم ومطور ويب محترف، متخصص في إنشاء تجارب ويب استثنائية.</p>
+          </div>
+          <div class="footer-links">
+            <h3>روابط سريعة</h3>
+            <ul>
+              <li><a href="#home">الرئيسية</a></li>
+              <li><a href="#portfolio">أعمالي</a></li>
+              <li><a href="#about">عني</a></li>
+              <li><a href="#contact">اتصل بي</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>تابعني</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-behance"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© 2023 PortfolioPro. جميع الحقوق محفوظة.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Menu Toggle
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navMenu = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+
+      // Close menu when clicking on a link
+      const navLinks = document.querySelectorAll("nav ul li a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+        });
+      });
+
+      // Form Submission
+      const contactForm = document.querySelector(".contact-form");
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("شكراً لتواصلك! سنرد عليك في أقرب وقت ممكن.");
+        contactForm.reset();
+      });
+
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 70,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
