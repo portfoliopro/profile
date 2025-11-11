@@ -1,11 +1,7 @@
-User-agent: \*
+User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
 
 Sitemap: https://portfoliopro.github.io/profile/sitemap.xml
-
-# Crawl-delay: 1
 
 User-agent: GPTBot
 Disallow: /
