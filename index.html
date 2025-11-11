@@ -19,6 +19,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -129,6 +131,8 @@
         --text-color: #333;
         --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         --transition: all 0.3s ease;
+        --text-color: #333;  /* داكن كفاية */
+        --light-color: #f8f9fa; /* فاتح كفاية */
       }
 
       body {
@@ -944,585 +948,590 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-      <div class="container">
-        <h1>
-          مطور تطبيقات محترف | خدمات تطوير تطبيقات الجوال والويب | دورات برمجة
-        </h1>
-        <p>
-          مطور تطبيقات محترف متخصص في Flutter، Android، iOS، React Native. أقدم
-          دورات برمجة متخصصة للمبتدئين والمحترفين. استعرض نماذج أعمالي واطلب
-          خدمة تطوير تطبيقك الآن.
-        </p>
-        <div>
-          <a
-            href="https://wa.me/97339517276"
-            target="_blank"
-            class="btn btn-whatsapp"
-            ><i class="fab fa-whatsapp"></i> تواصل عبر واتساب</a
-          >
-          <a href="#courses" class="btn btn-course"
-            ><i class="fas fa-graduation-cap"></i> استعرض الدورات</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-      <div class="container">
-        <div class="section-title">
-          <h2>نماذج أعمالي السابقة</h2>
-        </div>
-        <div class="disclaimer">
-          <h3>ملاحظة هامة:</h3>
+    <!-- Main Content -->
+    <main role="main">
+      
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <div class="container">
+          <h1>
+            مطور تطبيقات محترف | خدمات تطوير تطبيقات الجوال والويب | دورات برمجة
+          </h1>
           <p>
-            جميع الأعمال المعروضة هي نماذج محاكاة تم إنشاؤها لغرض العرض والتوضيح
-            فقط. جميع الحقوق الملكية والفكرية محفوظة. هذه النماذج توضح الخبرات
-            والقدرات التي أمتلكها لأقوم بتنفيذ مشاريع مشابهة لك.
+            مطور تطبيقات محترف متخصص في Flutter، Android، iOS، React Native. أقدم
+            دورات برمجة متخصصة للمبتدئين والمحترفين. استعرض نماذج أعمالي واطلب
+            خدمة تطوير تطبيقك الآن.
           </p>
-        </div>
-        <div class="portfolio-grid">
-          <!-- تطبيق Flutter -->
-          <div class="portfolio-item">
-            <div class="portfolio-img">
-              <img
-                src="https://www.andromo.com/wp-content/uploads/2025/07/Flutter-Mobile-App.webp?text=Flutter+App"
-                alt="تطبيق Flutter متعدد المنصات لمطور تطبيقات محترف"
-                loading="lazy"
-              />
-            </div>
-            <div class="portfolio-content">
-              <h3>تطبيقات Flutter متعددة المنصات</h3>
-              <p>
-                تطوير تطبيقات أندرويد و iOS باستخدام Flutter لتجربة متعددة
-                المنصات مع واجهة مستخدم متسقة وأداء عالي.
-              </p>
-              <div class="platform-badges">
-                <span class="badge android">Android</span>
-                <span class="badge ios">iOS</span>
-              </div>
-              <a href="#flutter" class="portfolio-link"
-                >عرض التطبيقات <i class="fas fa-arrow-left"></i
-              ></a>
-            </div>
-          </div>
-
-          <!-- تطبيقات Android Native -->
-          <div class="portfolio-item">
-            <div class="portfolio-img">
-              <img
-                src="https://www.workiy.com/sites/default/files/inline-images/android.png?text=Android+Native"
-                alt="تطبيق Android Native لمطور تطبيقات محترف"
-                loading="lazy"
-              />
-            </div>
-            <div class="portfolio-content">
-              <h3>تطبيقات Android Native</h3>
-              <p>
-                تطوير تطبيقات أندرويد أصلية باستخدام Java و Kotlin مع الاستفادة
-                الكاملة من إمكانيات نظام Android.
-              </p>
-              <div class="platform-badges">
-                <span class="badge android">Android</span>
-              </div>
-              <a href="#android" class="portfolio-link"
-                >عرض التطبيقات <i class="fas fa-arrow-left"></i
-              ></a>
-            </div>
-          </div>
-
-          <!-- تطبيقات iOS Native -->
-          <div class="portfolio-item">
-            <div class="portfolio-img">
-              <img
-                src="https://blog.mostaql.com/wp-content/uploads/2016/03/%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA-IOS.jpg?text=iOS+Native"
-                alt="تطبيق iOS Native لمطور تطبيقات محترف"
-                loading="lazy"
-              />
-            </div>
-            <div class="portfolio-content">
-              <h3>تطبيقات iOS Native</h3>
-              <p>
-                تطوير تطبيقات iOS أصلية باستخدام Swift و Objective-C مع الالتزام
-                بتصميمات Apple وإرشاداتها.
-              </p>
-              <div class="platform-badges">
-                <span class="badge ios">iOS</span>
-              </div>
-              <a href="#ios" class="portfolio-link"
-                >عرض التطبيقات <i class="fas fa-arrow-left"></i
-              ></a>
-            </div>
-          </div>
-
-          <!-- تطبيقات React Native -->
-          <div class="portfolio-item">
-            <div class="portfolio-img">
-              <img
-                src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*xDi2csEAWxu95IEkaNdFUQ.png?text=React+Native"
-                alt="تطبيق React Native لمطور تطبيقات محترف"
-                loading="lazy"
-              />
-            </div>
-            <div class="portfolio-content">
-              <h3>تطبيقات React Native</h3>
-              <p>
-                تطوير تطبيقات الجوال باستخدام React Native و JavaScript مع إعادة
-                استخدام الكود بين المنصات المختلفة.
-              </p>
-              <div class="platform-badges">
-                <span class="badge android">Android</span>
-                <span class="badge ios">iOS</span>
-              </div>
-              <a href="#react-native" class="portfolio-link"
-                >عرض التطبيقات <i class="fas fa-arrow-left"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-      <div class="container">
-        <div class="section-title">
-          <h2>مهاراتي التقنية</h2>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fab fa-html5" style="color: var(--web-color)"></i>
-            </div>
-            <h3>تطوير الويب</h3>
-            <p>HTML, CSS, JavaScript, PHP</p>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fab fa-python" style="color: var(--python-color)"></i>
-            </div>
-            <h3>Python</h3>
-            <p>تطوير التطبيقات والخوادم</p>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fab fa-js" style="color: var(--js-color)"></i>
-            </div>
-            <h3>JavaScript</h3>
-            <p>تطوير تطبيقات الويب التفاعلية</p>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fab fa-react" style="color: var(--react-color)"></i>
-            </div>
-            <h3>React JS</h3>
-            <p>تطوير واجهات المستخدم التفاعلية</p>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fab fa-flutter" style="color: var(--flutter-color)"></i>
-            </div>
-            <h3>Flutter</h3>
-            <p>تطوير تطبيقات الجوال متعددة المنصات</p>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fab fa-android" style="color: var(--android-color)"></i>
-            </div>
-            <h3>Android Native</h3>
-            <p>تطوير تطبيقات أندرويد الأصلية</p>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fab fa-apple" style="color: var(--apple-color)"></i>
-            </div>
-            <h3>iOS Native</h3>
-            <p>تطوير تطبيقات iOS الأصلية</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Flutter Apps Section -->
-    <section class="flutter-apps" id="flutter">
-      <div class="container">
-        <div class="section-title">
-          <h2>نماذج تطبيقات Flutter</h2>
-        </div>
-        <div class="flutter-item">
-          <div class="flutter-header">
-            <i class="fab fa-flutter"></i>
-            <h3>تطبيق Flutter للتجارة الإلكترونية</h3>
-          </div>
-          <div class="flutter-content">
-            <p>
-              تطبيق Flutter متكامل للتجارة الإلكترونية مع واجهة مستخدم رائعة
-              وتجربة مستخدم سلسة، مزود بنظام دفع ومتابعة الطلبات.
-            </p>
-            <div class="platform-badges">
-              <span class="badge android">Android</span>
-              <span class="badge ios">iOS</span>
-            </div>
+          <div>
             <a
-              href="https://portfoliopro.github.io/profile/Untitled%20design%20(1).pdf"
+              href="https://wa.me/97339517276"
               target="_blank"
-              class="portfolio-link"
-              >عرض التصميم <i class="fas fa-arrow-left"></i
-            ></a>
+              class="btn btn-whatsapp"
+              ><i class="fab fa-whatsapp"></i> تواصل عبر واتساب</a
+            >
+            <a href="#courses" class="btn btn-course"
+              ><i class="fas fa-graduation-cap"></i> استعرض الدورات</a
+            >
           </div>
         </div>
-        <div class="flutter-item">
-          <div class="flutter-header">
-            <i class="fab fa-flutter"></i>
-            <h3>تطبيق Flutter للخدمات</h3>
-          </div>
-          <div class="flutter-content">
-            <p>
-              تطبيق Flutter مع تكامل API متقدم وإدارة حالة متقدمة، مخصص لتقديم
-              الخدمات والحجوزات.
-            </p>
-            <div class="platform-badges">
-              <span class="badge android">Android</span>
-              <span class="badge ios">iOS</span>
-            </div>
-            <a
-              href="https://portfoliopro.github.io/profile/Untitled%20design.pdf"
-              target="_blank"
-              class="portfolio-link"
-              >عرض التصميم <i class="fas fa-arrow-left"></i
-            ></a>
-          </div>
-        </div>
-        <div class="flutter-item">
-          <div class="flutter-header">
-            <i class="fab fa-flutter"></i>
-            <h3>تطبيق Flutter للتعليم</h3>
-          </div>
-          <div class="flutter-content">
-            <p>
-              تطبيق Flutter مع تصميم مادي (Material Design) وتجربة مستخدم محسنة،
-              مخصص للتعليم الإلكتروني والدورات.
-            </p>
-            <div class="platform-badges">
-              <span class="badge android">Android</span>
-              <span class="badge ios">iOS</span>
-            </div>
-            <a
-              href="https://portfoliopro.github.io/profile/Untitled design (2).pdf"
-              target="_blank"
-              class="portfolio-link"
-              >عرض التصميم <i class="fas fa-arrow-left"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Courses Section -->
-    <section class="courses" id="courses">
-      <div class="container">
-        <div class="section-title">
-          <h2>دورات البرمجة</h2>
+      <!-- Portfolio Section -->
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <div class="section-title">
+            <h2>نماذج أعمالي السابقة</h2>
+          </div>
+          <div class="disclaimer">
+            <h3>ملاحظة هامة:</h3>
+            <p>
+              جميع الأعمال المعروضة هي نماذج محاكاة تم إنشاؤها لغرض العرض والتوضيح
+              فقط. جميع الحقوق الملكية والفكرية محفوظة. هذه النماذج توضح الخبرات
+              والقدرات التي أمتلكها لأقوم بتنفيذ مشاريع مشابهة لك.
+            </p>
+          </div>
+          <div class="portfolio-grid">
+            <!-- تطبيق Flutter -->
+            <div class="portfolio-item">
+              <div class="portfolio-img">
+                <img
+                  src="https://www.andromo.com/wp-content/uploads/2025/07/Flutter-Mobile-App.webp?text=Flutter+App"
+                  alt="تطبيق Flutter متعدد المنصات لمطور تطبيقات محترف"
+                  loading="lazy"
+                />
+              </div>
+              <div class="portfolio-content">
+                <h3>تطبيقات Flutter متعددة المنصات</h3>
+                <p>
+                  تطوير تطبيقات أندرويد و iOS باستخدام Flutter لتجربة متعددة
+                  المنصات مع واجهة مستخدم متسقة وأداء عالي.
+                </p>
+                <div class="platform-badges">
+                  <span class="badge android">Android</span>
+                  <span class="badge ios">iOS</span>
+                </div>
+                <a href="#flutter" class="portfolio-link"
+                  >عرض التطبيقات <i class="fas fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- تطبيقات Android Native -->
+            <div class="portfolio-item">
+              <div class="portfolio-img">
+                <img
+                  src="https://www.workiy.com/sites/default/files/inline-images/android.png?text=Android+Native"
+                  alt="تطبيق Android Native لمطور تطبيقات محترف"
+                  loading="lazy"
+                />
+              </div>
+              <div class="portfolio-content">
+                <h3>تطبيقات Android Native</h3>
+                <p>
+                  تطوير تطبيقات أندرويد أصلية باستخدام Java و Kotlin مع الاستفادة
+                  الكاملة من إمكانيات نظام Android.
+                </p>
+                <div class="platform-badges">
+                  <span class="badge android">Android</span>
+                </div>
+                <a href="#android" class="portfolio-link"
+                  >عرض التطبيقات <i class="fas fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- تطبيقات iOS Native -->
+            <div class="portfolio-item">
+              <div class="portfolio-img">
+                <img
+                  src="https://blog.mostaql.com/wp-content/uploads/2016/03/%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA-IOS.jpg?text=iOS+Native"
+                  alt="تطبيق iOS Native لمطور تطبيقات محترف"
+                  loading="lazy"
+                />
+              </div>
+              <div class="portfolio-content">
+                <h3>تطبيقات iOS Native</h3>
+                <p>
+                  تطوير تطبيقات iOS أصلية باستخدام Swift و Objective-C مع الالتزام
+                  بتصميمات Apple وإرشاداتها.
+                </p>
+                <div class="platform-badges">
+                  <span class="badge ios">iOS</span>
+                </div>
+                <a href="#ios" class="portfolio-link"
+                  >عرض التطبيقات <i class="fas fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- تطبيقات React Native -->
+            <div class="portfolio-item">
+              <div class="portfolio-img">
+                <img
+                  src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*xDi2csEAWxu95IEkaNdFUQ.png?text=React+Native"
+                  alt="تطبيق React Native لمطور تطبيقات محترف"
+                  loading="lazy"
+                />
+              </div>
+              <div class="portfolio-content">
+                <h3>تطبيقات React Native</h3>
+                <p>
+                  تطوير تطبيقات الجوال باستخدام React Native و JavaScript مع إعادة
+                  استخدام الكود بين المنصات المختلفة.
+                </p>
+                <div class="platform-badges">
+                  <span class="badge android">Android</span>
+                  <span class="badge ios">iOS</span>
+                </div>
+                <a href="#react-native" class="portfolio-link"
+                  >عرض التطبيقات <i class="fas fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="course-grid">
-          <!-- دورة Flutter -->
-          <div class="course-card">
-            <div class="course-header">
+      </section>
+
+      <!-- Skills Section -->
+      <section class="skills" id="skills">
+        <div class="container">
+          <div class="section-title">
+            <h2>مهاراتي التقنية</h2>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-html5" style="color: var(--web-color)"></i>
+              </div>
+              <h3>تطوير الويب</h3>
+              <p>HTML, CSS, JavaScript, PHP</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-python" style="color: var(--python-color)"></i>
+              </div>
+              <h3>Python</h3>
+              <p>تطوير التطبيقات والخوادم</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-js" style="color: var(--js-color)"></i>
+              </div>
+              <h3>JavaScript</h3>
+              <p>تطوير تطبيقات الويب التفاعلية</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-react" style="color: var(--react-color)"></i>
+              </div>
+              <h3>React JS</h3>
+              <p>تطوير واجهات المستخدم التفاعلية</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-flutter" style="color: var(--flutter-color)"></i>
+              </div>
+              <h3>Flutter</h3>
+              <p>تطوير تطبيقات الجوال متعددة المنصات</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-android" style="color: var(--android-color)"></i>
+              </div>
+              <h3>Android Native</h3>
+              <p>تطوير تطبيقات أندرويد الأصلية</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fab fa-apple" style="color: var(--apple-color)"></i>
+              </div>
+              <h3>iOS Native</h3>
+              <p>تطوير تطبيقات iOS الأصلية</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Flutter Apps Section -->
+      <section class="flutter-apps" id="flutter">
+        <div class="container">
+          <div class="section-title">
+            <h2>نماذج تطبيقات Flutter</h2>
+          </div>
+          <div class="flutter-item">
+            <div class="flutter-header">
               <i class="fab fa-flutter"></i>
-              <h3>دورة Flutter المتكاملة</h3>
+              <h3>تطبيق Flutter للتجارة الإلكترونية</h3>
             </div>
-            <div class="course-content">
+            <div class="flutter-content">
               <p>
-                تعلم تطوير تطبيقات الجوال متعددة المنصات باستخدام Flutter و Dart
-                من الصفر إلى الاحتراف.
+                تطبيق Flutter متكامل للتجارة الإلكترونية مع واجهة مستخدم رائعة
+                وتجربة مستخدم سلسة، مزود بنظام دفع ومتابعة الطلبات.
               </p>
-              <ul class="course-features">
-                <li>مقدمة إلى Flutter و Dart</li>
-                <li>واجهة المستخدم وتصميم التطبيقات</li>
-                <li>إدارة الحالة State Management</li>
-                <li>التكامل مع APIs وقواعد البيانات</li>
-                <li>نشر التطبيقات على متاجر التطبيقات</li>
-                <li>مشاريع عملية وتطبيقات حقيقية</li>
-              </ul>
               <div class="platform-badges">
-                <span class="badge course">مبتدئ - متقدم</span>
                 <span class="badge android">Android</span>
                 <span class="badge ios">iOS</span>
               </div>
-              <div class="course-price">1000ر.س</div>
-              <div class="course-actions">
-                <a
-                  href="https://wa.me/97339517276?text=أرغب في التسجيل في دورة Flutter"
-                  target="_blank"
-                  class="btn btn-whatsapp"
-                  ><i class="fab fa-whatsapp"></i> سجل الآن</a
-                >
-                <a href="#course-details" class="btn btn-course"
-                  >تفاصيل الدورة</a
-                >
-              </div>
+              <a
+                href="https://portfoliopro.github.io/profile/Untitled%20design%20(1).pdf"
+                target="_blank"
+                class="portfolio-link"
+                >عرض التصميم <i class="fas fa-arrow-left"></i
+              ></a>
             </div>
           </div>
-
-          <!-- دورة React Native -->
-          <div class="course-card">
-            <div class="course-header">
-              <i class="fab fa-react"></i>
-              <h3>دورة React Native</h3>
+          <div class="flutter-item">
+            <div class="flutter-header">
+              <i class="fab fa-flutter"></i>
+              <h3>تطبيق Flutter للخدمات</h3>
             </div>
-            <div class="course-content">
+            <div class="flutter-content">
               <p>
-                احترف تطوير تطبيقات الجوال باستخدام React Native و JavaScript
-                بسهولة وسرعة.
+                تطبيق Flutter مع تكامل API متقدم وإدارة حالة متقدمة، مخصص لتقديم
+                الخدمات والحجوزات.
               </p>
-              <ul class="course-features">
-                <li>أساسيات React Native</li>
-                <li>مكونات وتصميم الواجهات</li>
-                <li>التنقل بين الشاشات Navigation</li>
-                <li>التكامل مع الخدمات السحابية</li>
-                <li>أدوات التطوير والتصحيح</li>
-                <li>بناء تطبيقات حقيقية</li>
-              </ul>
               <div class="platform-badges">
-                <span class="badge course">متوسط - متقدم</span>
                 <span class="badge android">Android</span>
                 <span class="badge ios">iOS</span>
               </div>
-              <div class="course-price">1000ر.س</div>
-              <div class="course-actions">
-                <a
-                  href="https://wa.me/97339517276?text=أرغب في التسجيل في دورة React Native"
-                  target="_blank"
-                  class="btn btn-whatsapp"
-                  ><i class="fab fa-whatsapp"></i> سجل الآن</a
-                >
-                <a href="#course-details" class="btn btn-course"
-                  >تفاصيل الدورة</a
-                >
-              </div>
+              <a
+                href="https://portfoliopro.github.io/profile/Untitled%20design.pdf"
+                target="_blank"
+                class="portfolio-link"
+                >عرض التصميم <i class="fas fa-arrow-left"></i
+              ></a>
             </div>
           </div>
-
-          <!-- دورة Python -->
-          <div class="course-card">
-            <div class="course-header">
-              <i class="fab fa-python"></i>
-              <h3>دورة Python الشاملة</h3>
+          <div class="flutter-item">
+            <div class="flutter-header">
+              <i class="fab fa-flutter"></i>
+              <h3>تطبيق Flutter للتعليم</h3>
             </div>
-            <div class="course-content">
+            <div class="flutter-content">
               <p>
-                تعلم لغة Python من الصفر إلى الاحتراف لتطوير التطبيقات، الويب،
-                وتحليل البيانات.
+                تطبيق Flutter مع تصميم مادي (Material Design) وتجربة مستخدم محسنة،
+                مخصص للتعليم الإلكتروني والدورات.
               </p>
-              <ul class="course-features">
-                <li>أساسيات Python والمفاهيم البرمجية</li>
-                <li>هياكل البيانات والخوارزميات</li>
-                <li>البرمجة الشيئية OOP</li>
-                <li>تطوير واجهات المستخدم</li>
-                <li>قواعد البيانات وإدارة البيانات</li>
-                <li>مشاريع عملية في مجالات مختلفة</li>
-              </ul>
               <div class="platform-badges">
-                <span class="badge course">مبتدئ - متقدم</span>
-                <span class="badge android">تطبيقات</span>
-                <span class="badge ios">ويب</span>
+                <span class="badge android">Android</span>
+                <span class="badge ios">iOS</span>
               </div>
-              <div class="course-price">1000ر.س</div>
-              <div class="course-actions">
-                <a
-                  href="https://wa.me/97339517276?text=أرغب في التسجيل في دورة Python"
-                  target="_blank"
-                  class="btn btn-whatsapp"
-                  ><i class="fab fa-whatsapp"></i> سجل الآن</a
-                >
-                <a href="#course-details" class="btn btn-course"
-                  >تفاصيل الدورة</a
-                >
+              <a
+                href="https://portfoliopro.github.io/profile/Untitled design (2).pdf"
+                target="_blank"
+                class="portfolio-link"
+                >عرض التصميم <i class="fas fa-arrow-left"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Courses Section -->
+      <section class="courses" id="courses">
+        <div class="container">
+          <div class="section-title">
+            <h2>دورات البرمجة</h2>
+          </div>
+          <div class="course-grid">
+            <!-- دورة Flutter -->
+            <div class="course-card">
+              <div class="course-header">
+                <i class="fab fa-flutter"></i>
+                <h3>دورة Flutter المتكاملة</h3>
+              </div>
+              <div class="course-content">
+                <p>
+                  تعلم تطوير تطبيقات الجوال متعددة المنصات باستخدام Flutter و Dart
+                  من الصفر إلى الاحتراف.
+                </p>
+                <ul class="course-features">
+                  <li>مقدمة إلى Flutter و Dart</li>
+                  <li>واجهة المستخدم وتصميم التطبيقات</li>
+                  <li>إدارة الحالة State Management</li>
+                  <li>التكامل مع APIs وقواعد البيانات</li>
+                  <li>نشر التطبيقات على متاجر التطبيقات</li>
+                  <li>مشاريع عملية وتطبيقات حقيقية</li>
+                </ul>
+                <div class="platform-badges">
+                  <span class="badge course">مبتدئ - متقدم</span>
+                  <span class="badge android">Android</span>
+                  <span class="badge ios">iOS</span>
+                </div>
+                <div class="course-price">1000ر.س</div>
+                <div class="course-actions">
+                  <a
+                    href="https://wa.me/97339517276?text=أرغب في التسجيل في دورة Flutter"
+                    target="_blank"
+                    class="btn btn-whatsapp"
+                    ><i class="fab fa-whatsapp"></i> سجل الآن</a
+                  >
+                  <a href="#course-details" class="btn btn-course"
+                    >تفاصيل الدورة</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- دورة React Native -->
+            <div class="course-card">
+              <div class="course-header">
+                <i class="fab fa-react"></i>
+                <h3>دورة React Native</h3>
+              </div>
+              <div class="course-content">
+                <p>
+                  احترف تطوير تطبيقات الجوال باستخدام React Native و JavaScript
+                  بسهولة وسرعة.
+                </p>
+                <ul class="course-features">
+                  <li>أساسيات React Native</li>
+                  <li>مكونات وتصميم الواجهات</li>
+                  <li>التنقل بين الشاشات Navigation</li>
+                  <li>التكامل مع الخدمات السحابية</li>
+                  <li>أدوات التطوير والتصحيح</li>
+                  <li>بناء تطبيقات حقيقية</li>
+                </ul>
+                <div class="platform-badges">
+                  <span class="badge course">متوسط - متقدم</span>
+                  <span class="badge android">Android</span>
+                  <span class="badge ios">iOS</span>
+                </div>
+                <div class="course-price">1000ر.س</div>
+                <div class="course-actions">
+                  <a
+                    href="https://wa.me/97339517276?text=أرغب في التسجيل في دورة React Native"
+                    target="_blank"
+                    class="btn btn-whatsapp"
+                    ><i class="fab fa-whatsapp"></i> سجل الآن</a
+                  >
+                  <a href="#course-details" class="btn btn-course"
+                    >تفاصيل الدورة</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- دورة Python -->
+            <div class="course-card">
+              <div class="course-header">
+                <i class="fab fa-python"></i>
+                <h3>دورة Python الشاملة</h3>
+              </div>
+              <div class="course-content">
+                <p>
+                  تعلم لغة Python من الصفر إلى الاحتراف لتطوير التطبيقات، الويب،
+                  وتحليل البيانات.
+                </p>
+                <ul class="course-features">
+                  <li>أساسيات Python والمفاهيم البرمجية</li>
+                  <li>هياكل البيانات والخوارزميات</li>
+                  <li>البرمجة الشيئية OOP</li>
+                  <li>تطوير واجهات المستخدم</li>
+                  <li>قواعد البيانات وإدارة البيانات</li>
+                  <li>مشاريع عملية في مجالات مختلفة</li>
+                </ul>
+                <div class="platform-badges">
+                  <span class="badge course">مبتدئ - متقدم</span>
+                  <span class="badge android">تطبيقات</span>
+                  <span class="badge ios">ويب</span>
+                </div>
+                <div class="course-price">1000ر.س</div>
+                <div class="course-actions">
+                  <a
+                    href="https://wa.me/97339517276?text=أرغب في التسجيل في دورة Python"
+                    target="_blank"
+                    class="btn btn-whatsapp"
+                    ><i class="fab fa-whatsapp"></i> سجل الآن</a
+                  >
+                  <a href="#course-details" class="btn btn-course"
+                    >تفاصيل الدورة</a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Video Demo Section -->
-    <section class="video-demo" id="demo">
-      <div class="container">
-        <div class="section-title">
-          <h2>عرض توضيحي</h2>
+      <!-- Video Demo Section -->
+      <section class="video-demo" id="demo">
+        <div class="container">
+          <div class="section-title">
+            <h2>عرض توضيحي</h2>
+          </div>
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/yye7rSsiV6k?si=UiNcUEHadsArWayB"
+              title="عرض توضيحي لتطبيق Flutter"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
-        <div class="video-container">
-          <iframe
-            src="https://www.youtube.com/embed/yye7rSsiV6k?si=UiNcUEHadsArWayB"
-            title="عرض توضيحي لتطبيق Flutter"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-      <div class="container">
-        <div class="section-title">
-          <h2>عن المطور</h2>
-        </div>
-        <div class="about-content">
-          <div class="about-text">
-            <h2>مطور تطبيقات محترف ومقدم دورات برمجة</h2>
-            <p>
-              أنا مطور تطبيقات شغوف بإنشاء تجارب رقمية استثنائية. مع أكثر من 5
-              سنوات من الخبرة في مجال تطوير التطبيقات، أساعد العملاء على تحويل
-              أفكارهم إلى تطبيقات واقعية تعمل بكفاءة على مختلف المنصات.
-            </p>
-            <p>
-              أتخصص في تطوير تطبيقات الجوال باستخدام Flutter، وتطوير تطبيقات
-              الويب باستخدام React.js، وتطوير تطبيقات Python للخوادم وسطح
-              المكتب. بالإضافة إلى ذلك، أقدم دورات برمجة متخصصة للمبتدئين
-              والمحترفين لمساعدتهم على دخول عالم البرمجة وتطوير مهاراتهم.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-item">Flutter</span>
-              <span class="tech-item">Dart</span>
-              <span class="tech-item">React JS</span>
-              <span class="tech-item">JavaScript</span>
-              <span class="tech-item">Python</span>
-              <span class="tech-item">PHP</span>
-              <span class="tech-item">HTML5</span>
-              <span class="tech-item">CSS3</span>
-              <span class="tech-item">Android Native</span>
-              <span class="tech-item">iOS Native</span>
+      <!-- About Section -->
+      <section class="about" id="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>عن المطور</h2>
+          </div>
+          <div class="about-content">
+            <div class="about-text">
+              <h2>مطور تطبيقات محترف ومقدم دورات برمجة</h2>
+              <p>
+                أنا مطور تطبيقات شغوف بإنشاء تجارب رقمية استثنائية. مع أكثر من 5
+                سنوات من الخبرة في مجال تطوير التطبيقات، أساعد العملاء على تحويل
+                أفكارهم إلى تطبيقات واقعية تعمل بكفاءة على مختلف المنصات.
+              </p>
+              <p>
+                أتخصص في تطوير تطبيقات الجوال باستخدام Flutter، وتطوير تطبيقات
+                الويب باستخدام React.js، وتطوير تطبيقات Python للخوادم وسطح
+                المكتب. بالإضافة إلى ذلك، أقدم دورات برمجة متخصصة للمبتدئين
+                والمحترفين لمساعدتهم على دخول عالم البرمجة وتطوير مهاراتهم.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-item">Flutter</span>
+                <span class="tech-item">Dart</span>
+                <span class="tech-item">React JS</span>
+                <span class="tech-item">JavaScript</span>
+                <span class="tech-item">Python</span>
+                <span class="tech-item">PHP</span>
+                <span class="tech-item">HTML5</span>
+                <span class="tech-item">CSS3</span>
+                <span class="tech-item">Android Native</span>
+                <span class="tech-item">iOS Native</span>
+              </div>
+            </div>
+            <div class="about-image">
+              <div class="profile-img">
+                <i class="fas fa-laptop-code"></i>
+              </div>
             </div>
           </div>
-          <div class="about-image">
-            <div class="profile-img">
-              <i class="fas fa-laptop-code"></i>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
-      <div class="container">
-        <div class="section-title">
-          <h2>الأسئلة الشائعة</h2>
+      <!-- FAQ Section -->
+      <section class="faq" id="faq">
+        <div class="container">
+          <div class="section-title">
+            <h2>الأسئلة الشائعة</h2>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>ما هي مدة تطوير التطبيق؟</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  مدة التطوير تعتمد على تعقيد التطبيق والميزات المطلوبة. بشكل عام،
+                  التطبيقات البسيطة تستغرق 2-4 أسابيع، بينما التطبيقات المتوسطة
+                  تستغرق 4-8 أسابيع، والتطبيقات المعقدة قد تستغرق 8-12 أسبوع أو
+                  أكثر.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>هل تقدم خدمة الصيانة والدعم بعد التسليم؟</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  نعم، أقدم حزم صيانة ودعم شهري أو سنوي تشمل تحديثات الأمان، إصلاح
+                  الأخطاء، والتوافق مع إصدارات الأنظمة الجديدة.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>ما هي المنصات التي يمكنك تطوير التطبيقات لها؟</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  أتخصص في تطوير تطبيقات Android و iOS باستخدام Flutter و React
+                  Native، بالإضافة إلى التطبيقات الأصلية لكل منصة. كما أقوم بتطوير
+                  تطبيقات الويب باستخدام React.js و Python.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>هل تقدم دورات في البرمجة؟</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  نعم، أقدم دورات متخصصة في برمجة التطبيقات باستخدام Flutter،
+                  React Native، Python، وتطوير الويب. الدورات تناسب المبتدئين
+                  والمحترفين وتشمل مشاريع عملية.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>هل تقدم شهادات معتمدة بعد إنهاء الدورات؟</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  نعم، أقدم شهادات إتمام معتمدة بعد إنهاء كل دورة بنجاح، مع
+                  إمكانية توثيقها للجهات الرسمية إذا لزم الأمر.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="faq-list">
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>ما هي مدة تطوير التطبيق؟</h3>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-              <p>
-                مدة التطوير تعتمد على تعقيد التطبيق والميزات المطلوبة. بشكل عام،
-                التطبيقات البسيطة تستغرق 2-4 أسابيع، بينما التطبيقات المتوسطة
-                تستغرق 4-8 أسابيع، والتطبيقات المعقدة قد تستغرق 8-12 أسبوع أو
-                أكثر.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>هل تقدم خدمة الصيانة والدعم بعد التسليم؟</h3>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-              <p>
-                نعم، أقدم حزم صيانة ودعم شهري أو سنوي تشمل تحديثات الأمان، إصلاح
-                الأخطاء، والتوافق مع إصدارات الأنظمة الجديدة.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>ما هي المنصات التي يمكنك تطوير التطبيقات لها؟</h3>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-              <p>
-                أتخصص في تطوير تطبيقات Android و iOS باستخدام Flutter و React
-                Native، بالإضافة إلى التطبيقات الأصلية لكل منصة. كما أقوم بتطوير
-                تطبيقات الويب باستخدام React.js و Python.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>هل تقدم دورات في البرمجة؟</h3>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-              <p>
-                نعم، أقدم دورات متخصصة في برمجة التطبيقات باستخدام Flutter،
-                React Native، Python، وتطوير الويب. الدورات تناسب المبتدئين
-                والمحترفين وتشمل مشاريع عملية.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>هل تقدم شهادات معتمدة بعد إنهاء الدورات؟</h3>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-              <p>
-                نعم، أقدم شهادات إتمام معتمدة بعد إنهاء كل دورة بنجاح، مع
-                إمكانية توثيقها للجهات الرسمية إذا لزم الأمر.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="section-title">
-          <h2>تواصل معي</h2>
-        </div>
-        <div class="contact-info">
-          <div class="contact-item">
-            <i class="fab fa-whatsapp"></i>
-            <h3>واتساب</h3>
-            <a href="https://wa.me/97339517276" target="_blank"
-              >+973 3951 7276</a
-            >
+      <!-- Contact Section -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2>تواصل معي</h2>
           </div>
-          <div class="contact-item">
-            <i class="fab fa-instagram"></i>
-            <h3>انستجرام</h3>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fab fa-whatsapp"></i>
+              <h3>واتساب</h3>
+              <a href="https://wa.me/97339517276" target="_blank"
+                >+973 3951 7276</a
+              >
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-instagram"></i>
+              <h3>انستجرام</h3>
+              <a
+                href="https://www.instagram.com/applicationdevelopment"
+                target="_blank"
+                >@applicationdevelopment</a
+              >
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-tiktok"></i>
+              <h3>تيك توك</h3>
+              <a href="https://www.tiktok.com/@projcet" target="_blank"
+                >@projcet</a
+              >
+            </div>
+          </div>
+          <div style="text-align: center">
             <a
-              href="https://www.instagram.com/applicationdevelopment"
+              href="https://wa.me/97339517276"
               target="_blank"
-              >@applicationdevelopment</a
-            >
-          </div>
-          <div class="contact-item">
-            <i class="fab fa-tiktok"></i>
-            <h3>تيك توك</h3>
-            <a href="https://www.tiktok.com/@projcet" target="_blank"
-              >@projcet</a
+              class="btn btn-whatsapp"
+              ><i class="fab fa-whatsapp"></i> تواصل عبر واتساب الآن</a
             >
           </div>
         </div>
-        <div style="text-align: center">
-          <a
-            href="https://wa.me/97339517276"
-            target="_blank"
-            class="btn btn-whatsapp"
-            ><i class="fab fa-whatsapp"></i> تواصل عبر واتساب الآن</a
-          >
-        </div>
-      </div>
-    </section>
+      </section>
+
+    </main>
 
     <!-- Footer -->
     <footer>
